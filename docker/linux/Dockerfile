@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 
 # To make it easier for build and release pipelines to run apt-get,
 # configure apt to not require confirmation (assume the -y argument by default)
@@ -13,9 +13,10 @@ RUN apt-get update \
         git \
         iputils-ping \
         libcurl3 \
-        libicu55 \
+        libicu74 \
         libunwind8 \
-        netcat
+        netcat \
+        unzip
 
 WORKDIR /azp
 
